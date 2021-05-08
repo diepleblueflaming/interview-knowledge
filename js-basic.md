@@ -4,17 +4,14 @@
 ## JS EVENT LOOP, CALLSTACK, EVENT TABLE, CALLBACK QUEUE, JOB/EVENT QUEUE, HEAP
 
 1. **CALL STACK**
-   <br>
-   - Where all javascript code gets pushed in and executed one by one and gets popped out once the execution is done.
-     <br><br>
+  - Where all javascript code gets pushed in and executed one by one and gets popped out once the execution is done.
+<br><br>
 2. **EVENT TABLE**
-   <br>
-    - Event table responsible for moving all asynchronous code to callback/event queue after specified time.
-    <br><br>
+  - Event table responsible for moving all asynchronous code to callback/event queue after specified time.
+<br><br>
 3. **HEAP**
-  <br>
   - HEAP is where memory allocation happens for all variable that is defined in program.
-  <br><br>
+<br><br>
 4. **Callback queue** (Include Task Queue(also known as Macro Task) and Job Queue(Micro Task))
   - Callback queue is where all asynchronous code gets pushed to and wait for the execution.
   - Task Queue
