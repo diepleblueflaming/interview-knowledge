@@ -16,21 +16,20 @@
   - HEAP is where memory allocation happens for all variable that is defined in program.
   <br><br>
 4. **Callback queue** (Include Task Queue(also known as Macro Task) and Job Queue(Micro Task))
-    <br>
-    - Callback queue is where all asynchronous code gets pushed to and wait for the execution.
-    - Task Queue
-      - Task Queue where asynchronous code like: callback of an event, callback in setTimeout, setInterval, code from a console or `<script>` tag gets pushed to.
-      - A new JavaScript program or subprogram is executed (such as from a console, or by running the code in a `<script>` element) directly.
-      - An event fires, adding the event's callback function to the task queue.
-      - A timeout or interval created with `setTimeout()` or `setInterval()` is reached, causing the corresponding callback to be added to the task queue.
-    - Job Queue
-      - is where all codes in thenable method(callback method) of a Promise are added to once when Promise is resolved.
-      - Have priority than Task Queue. 
-    - Event Loop
-      - Event loop keeps running continuously and check Call Stack. There are two case:
-      - If Call Stack is not empty(has any statement to execute) then it will not check the callback queue.
-      - If Call Stack is empty, it will check the Callback Queue(both [Task Queue] and [Job Queue]). First it will check Job Queue and then check Task Queue. If [Callback Queue] not empty it will take first event from [Callback Queue] and push it to [Call Stack] to execution.
-  <br><br>
+  - Callback queue is where all asynchronous code gets pushed to and wait for the execution.
+  - Task Queue
+    - Task Queue where asynchronous code like: callback of an event, callback in setTimeout, setInterval, code from a console or `<script>` tag gets pushed to.
+    - A new JavaScript program or subprogram is executed (such as from a console, or by running the code in a `<script>` element) directly.
+    - An event fires, adding the event's callback function to the task queue.
+    - A timeout or interval created with `setTimeout()` or `setInterval()` is reached, causing the corresponding callback to be added to the task queue.
+  - Job Queue
+    - is where all codes in thenable method(callback method) of a Promise are added to once when Promise is resolved.
+    - Have priority than Task Queue. 
+  - Event Loop
+    - Event loop keeps running continuously and check Call Stack. There are two case:
+    - If Call Stack is not empty(has any statement to execute) then it will not check the callback queue.
+    - If Call Stack is empty, it will check the Callback Queue(both [Task Queue] and [Job Queue]). First it will check Job Queue and then check Task Queue. If [Callback Queue] not empty it will take first event from [Callback Queue] and push it to [Call Stack] to execution.
+<br><br>
 5. **SET TIMEOUT, SET INTERVAL**
   - setTimeout
     - Allows us run a function once after specific delay milliseconds.
